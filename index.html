@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Mi Portafolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Estilos personalizados si los necesitas */
+    body {
+      transition: background-color 0.5s ease, color 0.5s ease;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+  <!-- Botón de cambio de idioma -->
+  <header class="flex justify-end p-4">
+    <button id="lang-es" class="mr-2 p-2 bg-blue-500 text-white rounded">Español</button>
+    <button id="lang-en" class="p-2 bg-green-500 text-white rounded">English</button>
+  </header>
+
+  <!-- Botón de cambio de modo oscuro/claro -->
+  <div class="flex justify-end p-4">
+    <button id="toggle-theme" class="p-2 bg-indigo-500 text-white rounded">Toggle Dark/Light Mode</button>
+  </div>
+
+  <!-- Sección de introducción -->
+  <section class="flex flex-col items-center justify-center min-h-screen">
+    <h1 id="greeting" class="text-4xl font-bold mb-4">Hi! I'm <span class="text-pink-500">Your Name</span></h1>
+    <p id="description" class="text-center text-lg max-w-lg">
+      Peruvian student in software engineering, enthusiastic about learning new skills.
+    </p>
+
+    <div class="flex space-x-4 mt-6">
+      <!-- Iconos de redes sociales -->
+      <a href="#" class="text-2xl text-blue-500"><i class="fab fa-linkedin"></i></a>
+      <a href="#" class="text-2xl text-gray-900"><i class="fab fa-github"></i></a>
+      <a href="#" class="text-2xl text-red-500"><i class="fab fa-google"></i></a>
+    </div>
+  </section>
+
+  <!-- Sección de habilidades -->
+  <section class="bg-gray-200 dark:bg-gray-800 py-12">
+    <h2 class="text-3xl text-center font-bold mb-8">Skills</h2>
+    <div class="container mx-auto grid grid-cols-2 gap-4">
+      <div class="bg-white dark:bg-gray-700 p-4 rounded shadow">
+        <h3 class="text-lg font-semibold">Front-end</h3>
+        <div class="mt-2">
+          <span class="inline-block bg-green-300 p-2 rounded">Vue.js</span>
+          <span class="inline-block bg-red-300 p-2 rounded">Angular</span>
+        </div>
+      </div>
+      <!-- Añadir más bloques de habilidades -->
+    </div>
+  </section>
+
+  <!-- Sección de proyectos -->
+  <section class="py-12">
+    <h2 class="text-3xl text-center font-bold mb-8">Recent Projects</h2>
+    <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-- Proyecto 1 -->
+      <div class="bg-white dark:bg-gray-700 p-6 rounded shadow">
+        <h3 class="text-lg font-semibold">Graphy</h3>
+        <p class="mt-2">E-commerce app using Vue.js and Tailwind CSS</p>
+        <div class="mt-4 flex space-x-4">
+          <a href="#" class="p-2 bg-blue-500 text-white rounded">Demo</a>
+          <a href="#" class="p-2 bg-gray-500 text-white rounded">Repository</a>
+        </div>
+      </div>
+      <!-- Proyecto 2 -->
+      <div class="bg-white dark:bg-gray-700 p-6 rounded shadow">
+        <h3 class="text-lg font-semibold">Finance</h3>
+        <p class="mt-2">Financial web application using Vue.js and Azure</p>
+        <div class="mt-4 flex space-x-4">
+          <a href="#" class="p-2 bg-blue-500 text-white rounded">Demo</a>
+          <a href="#" class="p-2 bg-gray-500 text-white rounded">Repository</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-4 bg-gray-300 dark:bg-gray-800 text-center">
+    <p>&copy; 2023 Your Name</p>
+  </footer>
+
+  <script>
+    // Cambio de idioma
+    const translations = {
+      en: {
+        greeting: "Hi! I'm George Galvan",
+        description: "Peruvian student in software engineering, enthusiastic about learning new skills.",
+        projects: "Recent Projects",
+        skills: "Skills"
+      },
+      es: {
+        greeting: "Hola! Soy George Galván",
+        description: "Estudiante peruano de ingeniería de software, entusiasta por aprender nuevas habilidades.",
+        projects: "Proyectos recientes",
+        skills: "Habilidades"
+      }
+    };
+
+    document.getElementById('lang-es').addEventListener('click', () => changeLanguage('es'));
+    document.getElementById('lang-en').addEventListener('click', () => changeLanguage('en'));
+
+    function changeLanguage(lang) {
+      document.getElementById('greeting').textContent = translations[lang].greeting;
+      document.getElementById('description').textContent = translations[lang].description;
+    }
+
+    // Modo oscuro/claro
+    const themeToggleBtn = document.getElementById('toggle-theme');
+    themeToggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+    });
+  </script>
+</body>
+</html>
