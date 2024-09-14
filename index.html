@@ -6,13 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Mi Portafolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    /* Estilos personalizados si los necesitas */
-    body {
-      transition: background-color 0.5s ease, color 0.5s ease;
-    }
-  </style>
+  <!-- Enlace para los iconos de Devicons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@master/devicon.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Enlace a tu archivo de estilos CSS local -->
+  <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
   <!-- Botón de cambio de idioma -->
   <header class="flex justify-end p-4">
@@ -25,96 +25,220 @@
     <button id="toggle-theme" class="p-2 bg-indigo-500 text-white rounded">Toggle Dark/Light Mode</button>
   </div>
 
-  <!-- Sección de introducción -->
-  <section class="flex flex-col items-center justify-center min-h-screen">
-    <h1 id="greeting" class="text-4xl font-bold mb-4">Hi! I'm <span class="text-pink-500">Your Name</span></h1>
-    <p id="description" class="text-center text-lg max-w-lg">
-      Peruvian student in software engineering, enthusiastic about learning new skills.
-    </p>
+<!-- Sección de introducción con imagen circular -->
+<section class="flex flex-col items-center justify-center min-h-screen">
 
-    <div class="flex space-x-4 mt-6">
-      <!-- Iconos de redes sociales -->
-      <a href="#" class="text-2xl text-blue-500"><i class="fab fa-linkedin"></i></a>
-      <a href="#" class="text-2xl text-gray-900"><i class="fab fa-github"></i></a>
-      <a href="#" class="text-2xl text-red-500"><i class="fab fa-google"></i></a>
-    </div>
-  </section>
+  <!-- Imagen de perfil circular -->
+  <img src="resources/avatar_portafolio.png" alt="Foto de George Galván" class="rounded-full w-40 h-40 mb-4 object-cover">
+
+  <h1 id="greeting" class="text-4xl font-bold mb-4">Hi! I'm <span class="text-pink-500">George Galván</span></h1>
+  <p id="description" class="text-center text-lg max-w-lg">
+    Peruvian student in software engineering, enthusiastic about learning new skills.
+  </p>
+
+  <div class="flex space-x-4 mt-6">
+    <!-- Icono de LinkedIn con enlace -->
+    <a href="https://www.linkedin.com/in/tu-perfil-linkedin" target="_blank" class="text-2xl text-blue-500">
+      <i class="fab fa-linkedin"></i>
+    </a>
+    <!-- Icono de GitHub con enlace al perfil -->
+    <a href="https://github.com/GeorgeGC23" target="_blank" class="text-2xl text-gray-500">
+      <i class="fab fa-github"></i>
+    </a>
+    <!-- Icono de Gmail con enlace para enviar un correo -->
+    <a href="mailto:tu-email@gmail.com?subject=Contacto%20desde%20tu%20portafolio&body=Hola%2C%20me%20gustaría%20contactar%20contigo." class="text-2xl text-red-500">
+      <i class="fab fa-google"></i>
+    </a>
+  </div>
+</section>
+
 
   <!-- Sección de habilidades -->
   <section class="bg-gray-200 dark:bg-gray-800 py-12">
     <h2 class="text-3xl text-center font-bold mb-8">Skills</h2>
-    <div class="container mx-auto grid grid-cols-2 gap-4">
-      <div class="bg-white dark:bg-gray-700 p-4 rounded shadow">
-        <h3 class="text-lg font-semibold">Front-end</h3>
-        <div class="mt-2">
-          <span class="inline-block bg-green-300 p-2 rounded">Vue.js</span>
-          <span class="inline-block bg-red-300 p-2 rounded">Angular</span>
+    <div class="container mx-auto">
+
+      <!-- Front-end -->
+      <div class="mb-8">
+        <h3 class="text-xl font-semibold mb-2">Front-end</h3>
+        <div class="flex space-x-4">
+          <span class="inline-flex items-center space-x-2 bg-gray-700 text-white px-4 py-2 rounded-lg">
+            <i class="devicon-vuejs-plain colored"></i> <span>Vue.js</span>
+          </span>
+          <span class="inline-flex items-center space-x-2 bg-gray-700 text-white px-4 py-2 rounded-lg">
+            <i class="devicon-angularjs-plain colored"></i> <span>Angular</span>
+          </span>
         </div>
       </div>
-      <!-- Añadir más bloques de habilidades -->
+
+      <!-- Divider -->
+      <hr class="border-t border-gray-300 dark:border-gray-600 my-8">
+
+      <!-- Back-end -->
+      <div class="mb-8">
+        <h3 class="text-xl font-semibold mb-2">Back-end</h3>
+        <div class="flex space-x-4">
+          <span class="inline-flex items-center space-x-2 bg-gray-700 text-white px-4 py-2 rounded-lg">
+            <i class="devicon-dotnetcore-plain colored"></i> <span>.NET</span>
+          </span>
+          <span class="inline-flex items-center space-x-2 bg-gray-700 text-white px-4 py-2 rounded-lg">
+            <i class="devicon-spring-plain colored"></i> <span>Spring</span>
+          </span>
+          <span class="inline-flex items-center space-x-2 bg-gray-700 text-white px-4 py-2 rounded-lg">
+            <i class="devicon-django-plain colored"></i> <span>Django</span>
+          </span>
+        </div>
+      </div>
+
+      <!-- Divider -->
+      <hr class="border-t border-gray-300 dark:border-gray-600 my-8">
+
+      <!-- Mobile Development -->
+      <div class="mb-8">
+        <h3 class="text-xl font-semibold mb-2">Mobile Development</h3>
+        <div class="flex space-x-4">
+          <span class="inline-flex items-center space-x-2 bg-gray-700 text-white px-4 py-2 rounded-lg">
+            <i class="devicon-flutter-plain colored"></i> <span>Flutter</span>
+          </span>
+          <span class="inline-flex items-center space-x-2 bg-gray-700 text-white px-4 py-2 rounded-lg">
+            <i class="devicon-kotlin-plain colored"></i> <span>Kotlin</span>
+          </span>
+        </div>
+      </div>
+
+      <!-- Divider -->
+      <hr class="border-t border-gray-300 dark:border-gray-600 my-8">
+
+      <!-- Databases -->
+      <div class="mb-8">
+        <h3 class="text-xl font-semibold mb-2">Databases</h3>
+        <div class="flex space-x-4">
+          <span class="inline-flex items-center space-x-2 bg-gray-700 text-white px-4 py-2 rounded-lg">
+            <i class="devicon-mysql-plain colored"></i> <span>MySQL</span>
+          </span>
+          <span class="inline-flex items-center space-x-2 bg-gray-700 text-white px-4 py-2 rounded-lg">
+            <i class="devicon-postgresql-plain colored"></i> <span>PostgreSQL</span>
+          </span>
+          <span class="inline-flex items-center space-x-2 bg-gray-700 text-white px-4 py-2 rounded-lg">
+            <i class="devicon-mongodb-plain colored"></i> <span>MongoDB</span>
+          </span>
+        </div>
+      </div>
+
+      <!-- Divider -->
+      <hr class="border-t border-gray-300 dark:border-gray-600 my-8">
+
+      <!-- Programming Languages -->
+      <div class="mb-8">
+        <h3 class="text-xl font-semibold mb-2">Programming Languages</h3>
+        <div class="flex space-x-4">
+          <span class="inline-flex items-center space-x-2 bg-gray-700 text-white px-4 py-2 rounded-lg">
+            <i class="devicon-python-plain colored"></i> <span>Python</span>
+          </span>
+          <span class="inline-flex items-center space-x-2 bg-gray-700 text-white px-4 py-2 rounded-lg">
+            <i class="devicon-javascript-plain colored"></i> <span>JavaScript</span>
+          </span>
+          <span class="inline-flex items-center space-x-2 bg-gray-700 text-white px-4 py-2 rounded-lg">
+            <i class="devicon-typescript-plain colored"></i> <span>TypeScript</span>
+          </span>
+        </div>
+      </div>
+
+      <!-- Divider -->
+      <hr class="border-t border-gray-300 dark:border-gray-600 my-8">
+
+      <!-- Idiomas -->
+      <div class="mb-8">
+        <h3 class="text-xl font-semibold mb-2">Languages</h3>
+        <div class="flex space-x-4">
+          <!-- Español -->
+          <span class="inline-flex items-center space-x-2 bg-gray-700 text-white px-4 py-2 rounded-lg">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Flag_of_Spain.svg/40px-Flag_of_Spain.svg.png" alt="Bandera de España" class="w-6 h-4">
+            <span>Español</span>
+          </span>
+
+
+          <!-- Francés -->
+          <span class="inline-flex items-center space-x-2 bg-gray-700 text-white px-4 py-2 rounded-lg">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Flag_of_France.svg/40px-Flag_of_France.svg.png" alt="Bandera de Francia" class="w-6 h-4">
+            <span>Français</span>
+          </span>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Sección de proyectos -->
-  <section class="py-12">
-    <h2 class="text-3xl text-center font-bold mb-8">Recent Projects</h2>
-    <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
-      <!-- Proyecto 1 -->
-      <div class="bg-white dark:bg-gray-700 p-6 rounded shadow">
-        <h3 class="text-lg font-semibold">Graphy</h3>
-        <p class="mt-2">E-commerce app using Vue.js and Tailwind CSS</p>
-        <div class="mt-4 flex space-x-4">
-          <a href="#" class="p-2 bg-blue-500 text-white rounded">Demo</a>
-          <a href="#" class="p-2 bg-gray-500 text-white rounded">Repository</a>
-        </div>
+<!-- Sección de proyectos -->
+<section class="py-12">
+  <h2 class="text-2xl md:text-3xl text-center font-bold mb-8">Proyectos Recientes</h2>
+  <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+
+    <!-- Proyecto TecHelp -->
+    <div class="bg-white dark:bg-gray-700 p-4 md:p-6 rounded-lg shadow relative">
+      <img src="resources/tedhelp.png" alt="TecHelp" class="w-full h-36 md:h-40 object-cover rounded-t-lg">
+      <span class="absolute top-4 left-4 bg-blue-600 text-white text-xs px-2 py-1 rounded-lg">TecHelp Project</span>
+      <h3 class="text-base md:text-lg font-semibold mt-3">TecHelp</h3>
+      <p class="text-sm md:text-base mt-2">TecHelp es una aplicación que gestiona visitas técnicas para la reparación de celulares...</p>
+      <div class="mt-4 flex flex-wrap space-x-2">
+        <!-- Iconos de lenguajes usando Devicons -->
+        <span class="inline-flex items-center space-x-2 bg-gray-700 text-white px-3 py-1 rounded-lg text-sm">
+          <i class="devicon-angularjs-plain colored"></i>
+          <span>Angular</span>
+        </span>
+        <span class="inline-flex items-center space-x-2 bg-gray-700 text-white px-3 py-1 rounded-lg text-sm">
+          <i class="devicon-spring-plain colored"></i>
+          <span>Spring</span>
+        </span>
+        <span class="inline-flex items-center space-x-2 bg-gray-700 text-white px-3 py-1 rounded-lg text-sm">
+          <i class="devicon-mysql-plain colored"></i>
+          <span>MySQL</span>
+        </span>
       </div>
-      <!-- Proyecto 2 -->
-      <div class="bg-white dark:bg-gray-700 p-6 rounded shadow">
-        <h3 class="text-lg font-semibold">Finance</h3>
-        <p class="mt-2">Financial web application using Vue.js and Azure</p>
-        <div class="mt-4 flex space-x-4">
-          <a href="#" class="p-2 bg-blue-500 text-white rounded">Demo</a>
-          <a href="#" class="p-2 bg-gray-500 text-white rounded">Repository</a>
-        </div>
+      <div class="mt-4 flex flex-wrap space-x-2">
+        <a href="#" class="p-2 px-4 bg-blue-500 hover:bg-blue-600 text-white rounded-lg transition duration-300 text-sm md:text-base flex-grow sm:flex-grow-0">Repositorio</a>
+        <a href="#" class="p-2 px-4 bg-green-500 hover:bg-green-600 text-white rounded-lg transition duration-300 text-sm md:text-base flex-grow sm:flex-grow-0">Landing Page</a>
+        <a href="#" class="p-2 px-4 bg-purple-500 hover:bg-purple-600 text-white rounded-lg transition duration-300 text-sm md:text-base flex-grow sm:flex-grow-0">App Web</a>
       </div>
     </div>
-  </section>
+
+    <!-- Proyecto VetCare -->
+    <div class="bg-white dark:bg-gray-700 p-4 md:p-6 rounded-lg shadow relative">
+      <img src="resources/map_vet.png" alt="VetCare" class="w-full h-36 md:h-40 object-cover rounded-t-lg">
+      <span class="absolute top-4 left-4 bg-green-600 text-white text-xs px-2 py-1 rounded-lg">VetCare Project</span>
+      <h3 class="text-base md:text-lg font-semibold mt-3">VetCare</h3>
+      <p class="text-sm md:text-base mt-2">VetCare es una aplicación diseñada para facilitar la gestión de citas veterinarias...</p>
+      <div class="mt-4 flex flex-wrap space-x-2">
+        <!-- Iconos de lenguajes usando Devicons -->
+        <span class="inline-flex items-center space-x-2 bg-gray-700 text-white px-3 py-1 rounded-lg text-sm">
+          <i class="devicon-html5-plain colored"></i>
+          <span>HTML</span>
+        </span>
+        <span class="inline-flex items-center space-x-2 bg-gray-700 text-white px-3 py-1 rounded-lg text-sm">
+          <i class="devicon-css3-plain colored"></i>
+          <span>CSS</span>
+        </span>
+        <span class="inline-flex items-center space-x-2 bg-gray-700 text-white px-3 py-1 rounded-lg text-sm">
+          <i class="devicon-javascript-plain colored"></i>
+          <span>JavaScript</span>
+        </span>
+      </div>
+      <div class="mt-4 flex flex-wrap space-x-2">
+        <a href="#" class="p-2 px-4 bg-blue-500 hover:bg-blue-600 text-white rounded-lg transition duration-300 text-sm md:text-base flex-grow sm:flex-grow-0">Repositorio</a>
+        <a href="#" class="p-2 px-4 bg-green-500 hover:bg-green-600 text-white rounded-lg transition duration-300 text-sm md:text-base flex-grow sm:flex-grow-0">Landing Page</a>
+        <a href="#" class="p-2 px-4 bg-purple-500 hover:bg-purple-600 text-white rounded-lg transition duration-300 text-sm md:text-base flex-grow sm:flex-grow-0">App Web</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 
   <!-- Footer -->
   <footer class="py-4 bg-gray-300 dark:bg-gray-800 text-center">
-    <p>&copy; 2023 Your Name</p>
+    <p>&copy; 2024 George Galván Cerrón</p>
   </footer>
 
-  <script>
-    // Cambio de idioma
-    const translations = {
-      en: {
-        greeting: "Hi! I'm George Galvan",
-        description: "Peruvian student in software engineering, enthusiastic about learning new skills.",
-        projects: "Recent Projects",
-        skills: "Skills"
-      },
-      es: {
-        greeting: "Hola! Soy George Galván",
-        description: "Estudiante peruano de ingeniería de software, entusiasta por aprender nuevas habilidades.",
-        projects: "Proyectos recientes",
-        skills: "Habilidades"
-      }
-    };
-
-    document.getElementById('lang-es').addEventListener('click', () => changeLanguage('es'));
-    document.getElementById('lang-en').addEventListener('click', () => changeLanguage('en'));
-
-    function changeLanguage(lang) {
-      document.getElementById('greeting').textContent = translations[lang].greeting;
-      document.getElementById('description').textContent = translations[lang].description;
-    }
-
-    // Modo oscuro/claro
-    const themeToggleBtn = document.getElementById('toggle-theme');
-    themeToggleBtn.addEventListener('click', () => {
-      document.body.classList.toggle('dark');
-    });
-  </script>
+  <!-- Script -->
+<script src="js/script.js"></script>
 </body>
 </html>
