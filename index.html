@@ -14,16 +14,24 @@
 </head>
 
 <body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
-  <!-- Botón de cambio de idioma -->
-  <header class="flex justify-end p-4 space-x-2">
-    <button id="lang-es" class="language-btn">ES</button>
-    <button id="lang-en" class="language-btn">EN</button>
+  <!-- Encabezado con botones de idioma, tema, y enlaces a Skills y Projects -->
+  <header class="flex justify-between items-center p-4">
+    <div class="flex space-x-4">
+      <!-- Enlaces a Skills y Projects -->
+      <a href="#skills-title" class="minimalist-link">Skills</a>
+      <a href="#recent-projects-title" class="minimalist-link">Projects</a>
+    </div>
+
+    <div class="flex justify-end space-x-2">
+      <!-- Botón de cambio de idioma -->
+      <button id="lang-es" class="language-btn">ES</button>
+      <button id="lang-en" class="language-btn">EN</button>
+
+      <!-- Botón de cambio de modo oscuro/claro -->
+      <button id="toggle-theme" class="theme-btn">🌙</button>
+    </div>
   </header>
 
-  <!-- Botón de cambio de modo oscuro/claro -->
-  <div class="flex justify-end p-4">
-    <button id="toggle-theme" class="theme-btn">🌙</button>
-  </div>
 
   <!-- Sección de introducción -->
   <section id="intro-section" class="flex flex-col items-center justify-center min-h-screen opacity-0 transform translate-y-10">

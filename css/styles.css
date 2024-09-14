@@ -171,3 +171,33 @@ a i:hover {
   transform: translateY(-10px) scale(1.02);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
+
+/* Estilo minimalista para los enlaces de Skills y Projects */
+.minimalist-link {
+  font-size: 1rem;
+  text-decoration: none;
+  color: #8b8e91; /* Color de texto por defecto */
+  padding: 8px 12px;
+  transition: color 0.3s ease;
+}
+
+.minimalist-link:hover {
+  color: #3498db; /* Color al pasar el mouse (hover) */
+}
+
+/* Botones de idioma y tema */
+.language-btn,
+.theme-btn {
+  font-size: 1rem;
+  padding: 8px 12px;
+  border: none;
+  background: transparent;
+  color: #8b8e91;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.language-btn:hover,
+.theme-btn:hover {
+  color: #3498db;
+}
