@@ -21,6 +21,13 @@ body {
   --border-color: #4b5563;
 }
 
+
+html[data-theme="dark"] body,
+html[data-theme="light"] body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
@@ -118,16 +125,19 @@ a i:hover {
 /* Estilos adicionales para las tarjetas de habilidades y proyectos */
 .skill-card, .project-card {
   background-color: var(--bg-secondary);
+  color: var(--text-color);
   border: 1px solid var(--border-color);
   padding: 1rem;
   border-radius: 0.5rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .skill-card:hover, .project-card:hover {
   transform: scale(1.05);
 }
 
+/* Estilos para los badges de habilidades y proyectos */
 .skill-badge, .project-badge {
   background-color: var(--text-secondary);
   color: var(--bg-color);
@@ -136,12 +146,31 @@ a i:hover {
   margin-right: 0.5rem;
 }
 
-/* Estilos adicionales para el modo oscuro */
+/* Estilos adicionales para el tema oscuro específicamente */
 [data-theme="dark"] .skill-card,
 [data-theme="dark"] .project-card {
-  background-color: var(--bg-secondary);
-  border-color: var(--border-color);
+  background-color: #374151; /* gris oscuro para mejorar el contraste */
+  color: #f9fafb; /* texto claro */
+  border-color: #4b5563; /* borde gris */
 }
+
+/* Aseguramos que los badges también cambien en modo oscuro */
+[data-theme="dark"] .skill-badge, 
+[data-theme="dark"] .project-badge {
+  background-color: #4b5563; /* un gris intermedio */
+  color: #f9fafb; /* color de texto claro */
+}
+
+/* Fondo y color de la sección de habilidades en cada tema */
+.section-skills {
+  background-color: var(--bg-color);
+  transition: background-color 0.3s ease;
+}
+
+[data-theme="dark"] .section-skills {
+  background-color: #2d3748; /* un tono más oscuro para la sección de habilidades en modo oscuro */
+}
+
 
 
 /* Ajustes de imagen */
@@ -167,9 +196,19 @@ a i:hover {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.project-card, .skill-card {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+}
+
 .project-card:hover {
   transform: translateY(-10px) scale(1.02);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.icon-container a:hover {
+  color: var(--text-secondary);
 }
 
 /* Estilo minimalista para los enlaces de Skills y Projects */
@@ -200,4 +239,44 @@ a i:hover {
 .language-btn:hover,
 .theme-btn:hover {
   color: #3498db;
+}
+
+/* Estilos adicionales para el footer */
+footer {
+  background-color: var(--bg-secondary);
+  color: var(--text-secondary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Estilos específicos del footer en el tema oscuro */
+[data-theme="dark"] footer {
+  background-color: #2d3748; /* Un tono oscuro para el footer */
+  color: #d1d5db; /* Color claro para el texto */
+}
+
+/* Estilos para los enlaces de iconos de redes sociales en el footer */
+footer a {
+  color: var(--text-secondary);
+  transition: color 0.3s ease;
+}
+
+[data-theme="dark"] footer a {
+  color: #a0aec0; /* Un gris claro en modo oscuro */
+}
+
+footer a:hover {
+  color: var(--text-color);
+}
+
+[data-theme="dark"] footer a:hover {
+  color: #f9fafb; /* Texto claro al hacer hover en modo oscuro */
+}
+
+/* Color específico del texto del copyright en modo claro y oscuro */
+#footer-text {
+  color: var(--text-secondary);
+}
+
+[data-theme="dark"] #footer-text {
+  color: #a0aec0;
 }

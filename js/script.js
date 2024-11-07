@@ -88,24 +88,24 @@ langEsBtn.addEventListener('click', () => changeLanguage('es'));
 langEnBtn.addEventListener('click', () => changeLanguage('en'));
 
 
-// Función para aplicar el tema
+// Función para aplicar el tema y actualizar el icono del botón
 function applyTheme(theme) {
   document.documentElement.setAttribute('data-theme', theme);
-  toggleThemeBtn.textContent = theme === 'light' ? '🌙' : '☀️'; // Cambia el icono del botón
-  localStorage.setItem('theme', theme); // Guarda el tema en localStorage
+  toggleThemeBtn.textContent = theme === 'light' ? '🌙' : '☀️';
+  localStorage.setItem('theme', theme);
 }
 
-// Cargar el tema desde localStorage y aplicar al cargar la página
+// Aplicar el tema guardado en localStorage al cargar la página
 document.addEventListener('DOMContentLoaded', () => {
   const savedTheme = localStorage.getItem('theme') || 'light';
-  applyTheme(savedTheme); // Aplica el tema y el icono correctos
+  applyTheme(savedTheme);
 });
 
-// Cambiar el tema cuando se hace clic en el botón
+// Cambiar el tema al hacer clic en el botón de tema
 toggleThemeBtn.addEventListener('click', () => {
-  const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+  const currentTheme = document.documentElement.getAttribute('data-theme');
   const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-  applyTheme(newTheme); // Aplica el nuevo tema y actualiza el icono
+  applyTheme(newTheme);
 });
 
 
