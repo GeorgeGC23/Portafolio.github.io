@@ -163,14 +163,15 @@ a i:hover {
 
 /* Fondo y color de la sección de habilidades en cada tema */
 .section-skills {
-  background-color: var(--bg-color);
-  transition: background-color 0.3s ease;
+  background-color: var(--bg-secondary);
+  color: var(--text-secondary);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 [data-theme="dark"] .section-skills {
-  background-color: #2d3748; /* un tono más oscuro para la sección de habilidades en modo oscuro */
+  background-color: #2d3748; /* Fondo oscuro específico para habilidades */
+  color: #d1d5db; /* Color de texto claro */
 }
-
 
 
 /* Ajustes de imagen */
