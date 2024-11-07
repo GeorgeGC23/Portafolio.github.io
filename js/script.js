@@ -95,9 +95,20 @@ toggleThemeBtn.addEventListener('click', () => {
   // Aplicamos el nuevo tema
   document.documentElement.setAttribute('data-theme', newTheme);
 
+  // Actualizamos el ícono del botón según el tema actual
+  toggleThemeBtn.textContent = newTheme === 'light' ? '🌙' : '☀️';
+
   // Guardamos el nuevo tema en localStorage
   localStorage.setItem('theme', newTheme);
 });
+
+// Configuración inicial del tema y del icono al cargar la página
+document.addEventListener('DOMContentLoaded', () => {
+  const savedTheme = localStorage.getItem('theme') || 'light';
+  document.documentElement.setAttribute('data-theme', savedTheme);
+  toggleThemeBtn.textContent = savedTheme === 'light' ? '🌙' : '☀️';
+});
+
 
 
 document.addEventListener('DOMContentLoaded', () => {
